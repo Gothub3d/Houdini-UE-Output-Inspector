@@ -1,20 +1,16 @@
-# Houdini UE Output Inspector
-
-A Python script for Unreal Engine that hooks into the Houdini Engine Public API, listens for HDA cook events, and exports generated output data to a CSV for pipeline auditing.
-
 ## Features
 
 - Listens dynamically to Houdini Digital Asset (HDA) cook events inside Unreal Engine.
 - Extracts critical output details including index, type, name, and proxy status.
-- Automates reporting by exporting clean, production-ready CSV files for pipeline auditing.
+- **Batch Validator Tool:** Features a custom floating PySide UI panel to check assets for physics collision data and LOD counts instantly, raising warning notifications for failing meshes.
 
 ## Usage
 
-Import the module and run the export function:
+Import and run the floating interface tool:
 
 ```python
-import test_hda
+import batch_validator
 
-# Run with default path
-test_hda.export_hda_report()
+# Launch the visual UI dashboard window panel inside Unreal Engine
+batch_validator.launch_validator_tool()
 ```
